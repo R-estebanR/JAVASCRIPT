@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CICLO FOR NUM IMPAR </title>
+</head>
+<body>
+    <center>
+        <h2> GENERACION DE NUMEROS IMPARES</h2>
+        <h3> CICLO FOR </h3>
+        <script>
+            //programa que genera numeros pares dependiendo de un rango seleccionado 
+            //variables 
+            let inicio, final;//variable del ciclo for 
+            let num=0;//variable contador de numeros pares generados
+inicio=parseInt(prompt("ingrese numero inicial de rango.."));
+final=parseInt(prompt("ingrese numero final de rango.."));
+//proceso ciclo for 
+for (f=inicio;f<=final;f++){
+    //condicional si para validar numero par 
+    if (f%2==1){
+        document.write("<br>");
+        document.write("NUMERO IMPAR..."+f+"<br>");
+        num++;//contador de numeros pares 
+    }
+}
+//salida
+document.write("<br>");
+document.write("TOTAL DE NUMEROS IMPARES GENERADOS..."+num+"<br>");
+</script>
+</center>
+</body>
+</html>

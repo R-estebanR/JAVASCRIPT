@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALIDA INGRESO</title>
+    <!-- link de sitio Sweetalert mensajes más elegantes-->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <center>
+        <h1> VALIDACION DE INGRESO SESION </h1>
+        <h2> usuario tiene 3 intentos de ingreso </h2>
+        <script>
+            let datof;//variable ingresada por usuario 
+            let sw=0;//variable switche apagada 
+            let clave=123
+            //ciclo for 
+            for (f=1;f<=3;f++){
+                datof=parseInt(prompt("ingrese contraseña de acceso"))
+                //condicional
+                if(datof==clave){
+                    swal("estimado usuario","ACCESO PERMITIDO","SUCCESS");
+                    document.write("ACCESO PERMITIDO");
+                    sw=1;//variable switche cambia de valor (prendida)
+                    break;
+                }
+            }
+            //contorl de flujo programa para cuando nunca ingrese a sesion 
+            if (sw==0){
+                swal("estimado usuario","CUENTA BLOQUEADA","ERROR");
+                    document.write("CUENTA BLOQUEADA");
+            }
+
+
+            </script>
+            </center>    
+</body>
+</html>

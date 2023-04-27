@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIQUIDA FACTURA</title>
+</head>
+<body>
+    <center>
+        <h1>SUPERMERCADO EL VACANO </h1>
+        <h2>FACTURA VENTA </h2>
+        <script>
+            //Programa que permita capturar el nombre de un producto, su precio unitario y su cantidad, luego calcular subtotal, descuento 10%, iva 19% y neto a pagar. Enviar mensaje Gracias por su compra//
+            const SPeso = new Intl.NumberFormat('es-CO', {
+style: 'currency',
+currency: 'COP' ,
+minimumFractionDigits: 0
+});
+//variables 
+let precio, cant, desc, iva, sub, netop;
+var nombrep;
+//entrada 
+nombrep=prompt("ingrese nombre producto a comprar");
+precio=parseInt(prompt("ingrese precio producto"));
+cant=parseInt(prompt("ingrese cantidad a comprar"));
+//proceso
+subt=precio*cant;
+desc=subt*0.10; //subtotal*10%
+iva =(subt-desc)*0.19; //=(subtotal-descuento)*19%
+netop=(subt-desc+iva);
+//salida
+document.write("**********************************"+"<br>");
+document.write("producto comprado:...."+nombrep+"&nbsp&nbsp"+"precio producto..."+SPeso.format(precio)+"&nbsp&nbsp"+"cantidad comprada.."+cant+"<br>");
+document.write("**********************************"+"<br>");
+document.write("SUBTOTAL"+"<br>");
+document.write(SPeso.format(subt)+"<br>");
+document.write("DESCUENTO"+"<br>");
+document.write(SPeso.format(desc)+"<br>");
+document.write("IVA"+"<br>");
+document.write(SPeso.format(iva)+"<br>");
+document.write("NETO A PAGAR"+"<br>");
+document.write(SPeso.format(netop)+"<br>");
+document.write("GRACIAS POR SU COMPRA"+"<br>");
+    document.write("**********************************************"+"<br>");
+    </script>
+    </center>
+    </body>
+</html>

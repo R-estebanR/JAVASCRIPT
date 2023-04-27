@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CICLO WHILE</title>
+    <!-- link de sitio Sweetalert mensajes más elegantes-->
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <CENTER>
+        <img src="img/incap_png.png" alt="" width="150" height="150">
+        <h1>BOLETIN DE NOTAS PROGRAMACION WEB</h1>
+        <h2>MATERIA PAE02 JAVASCRIPT</h2>
+        <script>
+            let nota_STD, suma,prom;
+            suma=0;//acomulador o sumador 
+            prom=0;//promedio de nota final
+            num=1;//contador de notas STD
+            //entrada 
+            nomb_std=prompt("ingrese nombre estudianta");
+            //proceso ciclo whuile 
+            while (num<=3){
+                nota_STD=parseFloat(prompt("ingrese nota del estudiante: [1=DESEMPEÑO, 2=TALLER, 3=EXAMENES]"));
+                //aumulador o sumador de notas 
+                suma+=nota_STD;
+                //contador de notas std
+                num++;
+            }
+            //validacion de la calificacion 
+            prom=suma/3;
+            if (prom>=3.0){
+                swal("apreciado estudiante", "aprobaste materia pae", "success");
+            }else{
+                swal("apreciado estudiante", "reprobaste materia pae", "error");
+            }
+            document.write("<br>");
+            document.write("NOTA FINAL STD PROGRAMACION..."+prom.toFixed(2)+"<br>");
+
+            
+            </script>
+        </CENTER>
+</body>
+</html>

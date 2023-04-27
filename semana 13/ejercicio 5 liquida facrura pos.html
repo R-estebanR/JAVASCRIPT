@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FACTURA POS</title>
+</head>
+<body>
+    <center>
+        <h1> LIQUIDA FACTURA POS </h1>
+        <script>
+        const SPeso = new Intl.NumberFormat('es-CO', {
+            style: 'currency',
+            currency: 'COP',
+            minimumFractionDigits: 0
+        });
+        //
+        let suma=0;
+        let subt=0;
+        let netop=0;
+        let desc=0;
+        let iva=0;
+        let num=0;//contador productos ingresados 
+        let opc=true;// variable booleana verdadera
+        //
+        nomb_std=prompt("ingrese nombre del std");
+        //
+        while (opc==true){
+            nombrep=prompt('Ingrese nombre del producto'+num,'');
+            precio=prompt('Ingrese precio del producto a comprar'+num,'');
+            cant=prompt('Ingrese la cantidad deseada a comprar'+num,'');
+            opc=confirm('Desea continuar facturando? --> [ACEPTAR/CANCEL]');
+            //
+            subt=parseInt(precio)*parseInt(cant);
+            suma+=subt;
+            num++;
+        }
+        //calcular resto fx 
+        desc=suma*0.10;
+        iva=(suma-desc)*0.19;
+        netop=suma-desc+iva;
+        //
+        document.write('PRODUCTOS COMPRADOS: '+(num-1)+'<br>'+'<br>');
+        document.write('SUBTOTAL:'+'<br>'+'<br>');
+        document.write(SPeso.format(suma) +'<br>'+'<br>');
+        document.write('Descuento:'+'<br>'+'<br>');
+        document.write(SPeso.format(desc) +'<br>'+'<br>');
+        document.write('Iva:'+'<br>'+'<br>');
+        document.write(SPeso.format(iva) +'<br>'+'<br>');
+        document.write('Neto a pagar:'+'<br>'+'<br>');
+        document.write(SPeso.format(netop)+'<br>'+'<br>');        
+        document.write('*****************'+'ATENDIDO POR: '+nomstd+'****************'
+        +'<br>'+'<br>');
+        document.write('*********************'+'GRACIAS POR SU COMPRA:'+'*****************'+'<br>');
+        </script>
+        </center>
+    </body>
+</html>
