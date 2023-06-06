@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAPTURA/LECTURA </title>
+</head>
+<body>
+    <center>
+        <h1>CREACION LECTURA ARRAYS</h1>
+        <h2>CICLO FOR INDICES</h2>
+        <p>A continuacion se imprimen los datos almacenados en array</p>
+        <script>
+            let datos=new Array();//crear nuevo objeto array
+            let num;//la variable longitud ingresada por usuario por teclado
+            //CAPTURA
+            num=parseInt(prompt("ingrese cantidad de elementos a guardar en arrays"));
+            for(i=0;i<num;i++){
+                datos[i]=prompt("ingrese datos a guardar..");
+            }
+            //lectura
+            for (i=0;i<num;i++){
+                document.write("<br>"+"<br>");
+                document.write("indice.."+i+"&nbsp"+datos[i]+"<br>");
+                console.log(datos[i]);
+            }
+        </script>
+    </center>
+</body>
+</html>
